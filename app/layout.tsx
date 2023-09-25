@@ -1,8 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { League_Spartan } from 'next/font/google';
+import { Kanit } from 'next/font/google';
+import { Navbar } from '@/components';
 
-const inter = League_Spartan({ subsets: ['latin'], display: 'swap', preload: true });
+const kanit = Kanit({ subsets: ['latin'], display: 'swap', preload: true, weight: ['100', '200', '300', '400', '500'] });
 
 export const metadata: Metadata = {
   title: `Portfolio`,
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={kanit.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
