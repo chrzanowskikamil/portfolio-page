@@ -1,9 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Kanit } from 'next/font/google';
+import { Source_Code_Pro } from 'next/font/google';
 import { Navbar } from '@/components';
 
-const kanit = Kanit({ subsets: ['latin'], display: 'swap', preload: true, weight: ['100', '200', '300', '400', '500'] });
+const sourceCodePro = Source_Code_Pro({ subsets: ['latin'], display: 'swap', preload: true, weight: ['200', '300', '400', '500'] });
 
 export const metadata: Metadata = {
   title: `Portfolio`,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={kanit.className}>
+      <body className={sourceCodePro.className}>
         <Navbar />
         {children}
       </body>
