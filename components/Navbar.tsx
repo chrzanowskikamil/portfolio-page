@@ -21,9 +21,9 @@ export const Navbar: FC = () => {
       <>
         <li
           key={link.id}
-          className='p-4'>
+          className='p-2'>
           <Link
-            className='flex p-4 hover:text-primary-200 tracking-wider'
+            className='flex p-4 hover:text-emerald-400 tracking-wider'
             href={link.href}
             target={link.isExternal ? '_blank' : '_self'}>
             {link.label}
@@ -35,10 +35,10 @@ export const Navbar: FC = () => {
 
   return (
     <nav
-      className='flex justify-between px-20 py-6  text-primary-100 text-opacity-85 text-xl '
+      className='flex justify-between px-20 border-b border-b-emerald-950 text-primary-100 text-opacity-85 text-emerald-800'
       role='navigation'>
       <Link
-        className='p-8 font-bold'
+        className='p-6 font-bold'
         href='/'>
         kamch.
       </Link>
